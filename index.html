@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusHub Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>CampusHub</h2>
+            <p>Student Dashboard</p>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li class="active"><a href="index.html">🏠 Dashboard</a></li>
+                <li><a href="profile.html">👤 Profile</a></li>
+                <li><a href="timetable.html">📅 Timetable</a></li>
+                <li><a href="assignments.html">📝 Assignments</a></li>
+                <li><a href="attendance.html">📊 Attendance</a></li>
+                <li><a href="cgpa.html">🎓 CGPA</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div class="welcome">
+                <h1>Welcome, Sakshi 👋</h1>
+                <p>Have a productive day!</p>
+            </div>
+
+            <a href="profile.html" class="profile-photo">
+                👩
+            </a>
+
+        </div>
+
+        <!-- Hero Banner -->
+        <div class="hero-card">
+
+            <h2 id="greeting">🌞 Good Evening</h2>
+
+            <p>
+                "Success is the sum of small efforts repeated day in and day out."
+            </p>
+
+            <div class="hero-info">
+
+                <span>🔥 Study Streak : <b>7 Days</b></span>
+
+                <span id="current-date">📅 Loading...</span>
+                <span id="live-time">🕒 Loading...</span>
+
+
+            </div>
+
+            <button class="study-btn">
+                📚 Start Studying
+            </button>
+
+        </div>
+
+        <!-- Today's Progress -->
+
+<div class="progress-section">
+
+    <h2>📈 Today's Progress</h2>
+
+    <div class="progress-box">
+
+        <div class="progress-item">
+
+            <div class="progress-text">
+                <span>Study Goal</span>
+                <span id="study-percent">70%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="study-fill"></div>
+            </div>
+
+        </div>
+
+        <div class="progress-item">
+
+            <div class="progress-text">
+                <span>Attendance Goal</span>
+                <span id="attendance-goal">92%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill attendance-fill"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- Dashboard Cards -->
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>📅 Today's Classes</h3>
+                <p>5</p>
+            </div>
+
+            <div class="card">
+                <h3>📝 Assignments</h3>
+                <p>3</p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Attendance</h3>
+                <p>92%</p>
+            </div>
+
+            <div class="card">
+                <h3>🎓 CGPA</h3>
+                <p>8.70</p>
+            </div>
+
+        </div>
+        <!-- Quick Actions -->
+
+<div class="quick-actions">
+
+    <h2>⚡ Quick Actions</h2>
+
+    <div class="action-buttons">
+
+        <button>📚 Start Study</button>
+
+        <button onclick="location.href='timetable.html'">
+            📅 Timetable
+        </button>
+
+        <button onclick="location.href='assignments.html'">
+            📝 Assignments
+        </button>
+
+        <button onclick="location.href='attendance.html'">
+            📊 Attendance
+        </button>
+
+    </div>
+
+</div>
+
+        <!-- Bottom Section -->
+
+        <div class="bottom-section">
+
+            <!-- Events -->
+
+            <div class="events">
+
+                <h2>📢 Upcoming Events</h2>
+
+                <ul>
+                    <li>📝 Java Assignment - Tomorrow</li>
+                    <li>📘 DBMS Quiz - Friday</li>
+                    <li>🎉 College Fest - 20 July</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+    <h3>📅 Today's Classes</h3>
+    <p id="classes-count">5</p>
+</div>
+
+<div class="card">
+    <h3>📝 Assignments</h3>
+    <p id="assignment-count">3</p>
+</div>
+
+<div class="card">
+    <h3>📊 Attendance</h3>
+    <p id="attendance-percent">92%</p>
+</div>
+
+<div class="card">
+    <h3>🎓 CGPA</h3>
+    <p id="cgpa-value">8.70</p>
+</div>
+
+<div class="card">
+    <h3>📊 Attendance</h3>
+
+    <p id="attendance-percent">92%</p>
+
+    <small id="attendance-status"></small>
+</div>
+
+            <!-- Timetable -->
+
+            <div class="timetable">
+
+                <h2>📅 Today's Timetable</h2>
+
+                <ul>
+                    <li>09:00 AM - Java</li>
+                    <li>11:00 AM - DBMS</li>
+                    <li>02:00 PM - Operating System</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
