@@ -20,7 +20,7 @@ togglePassword.addEventListener("click", () => {
 });
 
 
-// Login Validation
+// Login Form
 
 const loginForm = document.getElementById("loginForm");
 
@@ -29,30 +29,47 @@ loginForm.addEventListener("submit", function(e){
     e.preventDefault();
 
     const email = document.getElementById("email").value.trim();
-    const pass = password.value.trim();
+    const pass = document.getElementById("password").value.trim();
 
-    if(email === "" || pass === ""){
+    // Check if user exists
 
-        alert("Please fill all fields.");
+    const storedUser = JSON.parse(localStorage.getItem("campusHubUser"));
+
+    if(!storedUser){
+
+        alert("No account found. Please Sign Up first.");
+
         return;
 
     }
 
-    if(!email.includes("@")){
+    // Email Check
 
-        alert("Enter a valid email.");
+    if(email !== storedUser.email){
+
+        alert("Invalid Email.");
+
         return;
 
     }
 
-    if(pass.length < 6){
+    // Password Check
 
-        alert("Password must be at least 6 characters.");
+    if(pass !== storedUser.password){
+
+        alert("Incorrect Password.");
+
         return;
 
     }
 
     alert("Login Successful 🎉");
+
+    // Save Login Status
+
+    localStorage.setItem("isLoggedIn","true");
+
+    // Open Dashboard
 
     window.location.href="index.html";
 
