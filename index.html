@@ -40,7 +40,7 @@
         <div class="header">
 
             <div class="welcome">
-                <h1>Welcome, Sakshi 👋</h1>
+                <h1 id="studentName">Welcome, Student 👋</h1>  
                 <p>Have a productive day!</p>
             </div>
 
@@ -138,6 +138,37 @@
             </div>
 
         </div>
+
+        <!-- Attendance Section -->
+
+<div class="attendance-section">
+
+    <div class="attendance-card">
+
+        <h2>📅 Today's Attendance</h2>
+
+        <p id="attendanceStatus">Not Marked</p>
+
+        <div class="attendance-buttons">
+
+            <button id="presentBtn" class="present-btn">
+                ✅ Present
+            </button>
+
+            <button id="absentBtn" class="absent-btn">
+                ❌ Absent
+            </button>
+
+        </div>
+
+        <h3>
+            Attendance : <span id="attendancePercentage">0%</span>
+        </h3>
+
+    </div>
+
+</div>
+
         <!-- Quick Actions -->
 
 <div class="quick-actions">
@@ -231,6 +262,6 @@
 </div>
 
 <script src="js/script.js"></script>
-
+<script src="js/attendance.js"></script>
 </body>
 </html>

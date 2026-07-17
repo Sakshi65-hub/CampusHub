@@ -1,4 +1,6 @@
+// ==========================
 // Greeting
+// ==========================
 
 const greeting = document.getElementById("greeting");
 
@@ -6,16 +8,27 @@ const hour = new Date().getHours();
 
 if (hour < 12) {
     greeting.innerHTML = "🌅 Good Morning";
-}
-else if (hour < 17) {
+} else if (hour < 17) {
     greeting.innerHTML = "☀️ Good Afternoon";
-}
-else {
+} else {
     greeting.innerHTML = "🌙 Good Evening";
 }
 
+// ==========================
+// Logged-in Student Name
+// ==========================
 
+const loggedInUser = JSON.parse(localStorage.getItem("campusHubUser"));
+
+if (loggedInUser) {
+    document.getElementById("studentName").textContent =
+        `Welcome, ${loggedInUser.name} 👋`;
+}
+
+
+// ==========================
 // Current Date
+// ==========================
 
 const date = new Date();
 
@@ -29,27 +42,34 @@ const options = {
 document.getElementById("current-date").innerHTML =
     "📅 " + date.toLocaleDateString("en-IN", options);
 
-    // Live Clock
+
+// ==========================
+// Live Clock
+// ==========================
 
 function updateClock() {
 
     const now = new Date();
 
-    const options = {
+    const timeOptions = {
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit"
     };
 
     document.getElementById("live-time").innerHTML =
-        "🕒 " + now.toLocaleTimeString("en-IN", options);
+        "🕒 " + now.toLocaleTimeString("en-IN", timeOptions);
 
 }
 
 updateClock();
 
 setInterval(updateClock, 1000);
+
+
+// ==========================
 // Dashboard Data
+// ==========================
 
 const dashboardData = {
     classes: 5,
@@ -59,37 +79,44 @@ const dashboardData = {
 };
 
 document.getElementById("classes-count").textContent =
-dashboardData.classes;
+    dashboardData.classes;
 
 document.getElementById("assignment-count").textContent =
-dashboardData.assignments;
+    dashboardData.assignments;
 
 document.getElementById("attendance-percent").textContent =
-dashboardData.attendance + "%";
+    dashboardData.attendance + "%";
 
 document.getElementById("cgpa-value").textContent =
-dashboardData.cgpa.toFixed(2);
+    dashboardData.cgpa.toFixed(2);
 
-const attendanceStatus = document.getElementById("attendance-status");
+
+// ==========================
+// Attendance Status
+// ==========================
+
+const dashboardAttendanceStatus =
+    document.getElementById("attendance-status");
 
 if (dashboardData.attendance >= 90) {
 
-    attendanceStatus.innerHTML = "🟢 Excellent";
+    dashboardAttendanceStatus.innerHTML = "🟢 Excellent";
+
+} else if (dashboardData.attendance >= 75) {
+
+    dashboardAttendanceStatus.innerHTML = "🟡 Good";
+
+} else {
+
+    dashboardAttendanceStatus.innerHTML = "🔴 Low Attendance";
 
 }
 
-else if (dashboardData.attendance >= 75) {
 
-    attendanceStatus.innerHTML = "🟡 Good";
-
-}
-
-else {
-
-    attendanceStatus.innerHTML = "🔴 Low Attendance";
-
-}
-
-// Progress Animation
+// ==========================
+// Progress Bar
+// ==========================
 
 document.getElementById("study-fill").style.width = "70%";
+
+

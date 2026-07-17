@@ -349,3 +349,82 @@ body{
     width:92%;
     background:#22c55e;
 }
+
+/* ===========================
+   Attendance Section
+=========================== */
+
+.attendance-section{
+    margin-top:30px;
+}
+
+.attendance-card{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.attendance-card h2{
+    color:#5b4bdb;
+    margin-bottom:15px;
+}
+
+#attendanceStatus{
+    font-size:18px;
+    font-weight:600;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.attendance-buttons{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.present-btn,
+.absent-btn{
+
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+    color:white;
+
+}
+
+.present-btn{
+
+    background:#28a745;
+
+}
+
+.present-btn:hover{
+
+    background:#218838;
+    transform:translateY(-3px);
+
+}
+
+.absent-btn{
+
+    background:#dc3545;
+
+}
+
+.absent-btn:hover{
+
+    background:#c82333;
+    transform:translateY(-3px);
+
+}
+
+.attendance-card h3{
+
+    color:#5b4bdb;
+    margin-top:10px;
+
+}
