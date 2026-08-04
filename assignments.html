@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - CampusHub</title>
+
+```
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<!-- Sidebar -->
+<aside class="sidebar">
+
+    <div class="logo">
+        <h2>CampusHub</h2>
+        <p>Student Dashboard</p>
+    </div>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">🏠 Dashboard</a></li>
+            <li><a href="profile.html">👤 Profile</a></li>
+            <li><a href="timetable.html">📅 Timetable</a></li>
+            <li class="active">
+                <a href="assignments.html">📝 Assignments</a>
+            </li>
+            <li><a href="attendance.html">📊 Attendance</a></li>
+            <li><a href="cgpa.html">🎓 CGPA</a></li>
+        </ul>
+    </nav>
+
+</aside>
+
+<!-- Main Content -->
+<main class="main-content">
+
+    <div class="header">
+        <div class="welcome">
+            <h1>📝 Assignments</h1>
+            <p>Manage your assignments and deadlines.</p>
+        </div>
+
+        <a href="profile.html" class="profile-photo">
+            👩
+        </a>
+    </div>
+
+    <!-- Add Assignment -->
+    <section class="assignment-form-section">
+
+        <h2>➕ Add Assignment</h2>
+
+        <form id="assignmentForm">
+
+            <input
+                type="text"
+                id="assignmentTitle"
+                placeholder="Assignment title"
+                required
+            >
+
+            <select id="assignmentSubject" required>
+    <option value="">Select Subject</option>
+    <option value="Java">Java</option>
+    <option value="DBMS">DBMS</option>
+    <option value="Operating System">Operating System</option>
+    <option value="Computer Networks">Computer Networks</option>
+    <option value="Python">Python</option>
+    <option value="Other">Other</option>
+</select>
+            <input
+                type="date"
+                id="assignmentDueDate"
+                required
+            >
+
+            <button type="submit">
+                ➕ Add Assignment
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Assignment List -->
+    <section class="assignments-section">
+
+        <div class="assignment-header">
+            <h2>📚 My Assignments</h2>
+
+            <span id="assignmentTotal">
+                0 Assignments
+            </span>
+        </div>
+
+        <div id="assignmentList">
+
+            <!-- Assignments will appear here -->
+
+        </div>
+
+    </section>
+
+</main>
+```
+
+</div>
+
+<script src="js/assignments.js"></script>
+
+</body>
+</html>
+
+ assignmentForm select {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+    outline: none;
+    cursor: pointer;
+}
+
+#assignmentForm select:focus {
+    border-color: #5b4bdb;
+    box-shadow: 0 0 0 3px rgba(91, 75, 219, 0.1);
+}
